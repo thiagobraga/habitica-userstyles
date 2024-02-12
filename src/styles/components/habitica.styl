@@ -1,0 +1,255 @@
+/* TODO: Mover para o outro Stylus de cores pastel */
+/* Improve link colors */
+a
+  color #4278b1
+
+/* Reduce font size */
+body
+  font-size 11px !important
+
+body
+h1
+h2
+h3
+h3.markdown
+h4
+  font-family 'Helvetica LT Std Cond', Helvetica, Roboto Condensed, sans-serif
+
+h3.markdown
+  font-size 12px
+
+// Make h1 a bit smaller
+.markdown
+  h1
+    margin 20px 0 !important
+    font-size 1.5rem
+
+  p
+    margin-bottom 0
+
+/* Make streak icons and text more transparent */
+.icons
+  opacity 0.65
+
+.icons-right .svg-icon
+  margin-left 0 !important
+
+.icons span
+.svg-icon.streak
+  height 6px !important
+
+.icons span
+  font-size 9px
+
+/* Adjust list spacing */
+ul
+  margin-bottom 0
+  padding-left 16px
+
+/* Reduce space between tasks */
+.custom-checkbox p
+  margin-bottom 3px
+
+/* Adjustments for subtasks:
+- Use same color from description
+- Reduce subtasks font size to match description
+- Adjust the color of checkbox to match both */
+.custom-control-label
+  color #686274
+  font-size 0.75rem
+
+  &:before
+    border-color #b0acb9 !important
+
+/* Hide + and - from habits without hits */
+.task-disabled-habit-control
+  &-bg > &-inner
+    display none
+
+/* Move due dates from tasks to right */
+.type_todo .icons > div:not(.icons-right)
+  order 1
+
+/* Remove purple focus border */
+.task-clickable-area:focus
+.task:not(.groupTask):focus-within .left-control
+.task:not(.groupTask):focus-within .right-control
+.task:not(.groupTask):focus-within .task-content
+.task:not(.groupTask):hover .left-control
+.task:not(.groupTask):hover .right-control
+.task:not(.groupTask):hover .task-content
+  border-color transparent !important
+
+.task-title
+  margin 0 !important
+  padding-bottom 0 !important
+
+.task:focus-within:not(.task-not-editable.task-not-scoreable)
+.task:hover:not(.task-not-editable.task-not-scoreable)
+  padding-bottom 0 !important
+
+.task-title h1
+  margin 30px 0
+
+.task-content
+  display grid
+  align-items center
+  padding-bottom 0 !important
+  grid-template-columns 1fr auto
+  grid-template-rows auto
+
+.task-content .task-clickable-area
+  grid-row 1
+
+.checklist
+  padding 0 0.75rem !important
+
+.task-content .checklist
+  grid-row 2
+
+.collapse-checklist
+  margin-bottom 0 !important
+
+.collapse-checklist span
+  height 8px !important
+
+.custom-control-label
+  color #666
+  font-size 0.625rem
+
+.task-content .icons
+  grid-row 1
+
+.task-clickable-area
+  padding-top 10px !important
+  padding-bottom 10px !important
+  border 0 !important
+
+.task
+  margin-bottom 1px !important
+  box-shadow 0 1px 2px 0 rgba(26, 24, 29, 0.015), 0 1px 4px 0 rgba(26, 24, 29, 0.05) !important
+
+/* Compact task height */
+.left-control
+.right-control
+  padding-top 0 !important
+  min-height $task-height !important
+
+/* Align counter indicator with task title */
+.icons
+  margin-top 0 !important
+
+/* Small description */
+.task-notes
+  font-size 10px
+  opacity 0.9
+
+.task-notes:not(:empty)
+  margin-top 4px
+
+/* Remove underline when using h1 on description */
+.task-notes > h1 + hr
+  display none
+
+.task .left-control
+  display flex
+  align-items center
+
+.daily-todo-control
+  margin-top 0 !important
+
+.type_daily .task-control
+  width $checkbox-size
+  height $checkbox-size
+
+.task-control
+  $checkbox-size = 20px
+  width $checkbox-size
+  height $checkbox-size
+
+.task-control
+.left-control
+.right-control
+  display flex
+  justify-content center
+  align-items center
+
+.habit-control-positive-disabled
+.habit-control-positive-enabled
+  padding 0
+
+.habit-control .svg-icon
+  display flex
+  width $habit-control-size
+  height $habit-control-size
+
+.task-disabled-daily-todo-control-content .task-title
+  position relative
+  opacity 0.5
+
+.task-disabled-daily-todo-control-content .task-title::before
+  position absolute
+  top 45%
+  right 0
+  left 0
+  border-top 1px solid rgba(0, 0, 0, 0.85)
+  content ''
+  transform translateY(-50%)
+
+/* Disable extra border on group task */
+.task.groupTask:focus-within:not(.task-not-editable.task-not-scoreable)
+.task.groupTask:hover:not(.task-not-editable.task-not-scoreable)
+  border 0 !important
+  margin initial !important
+  margin-bottom 1px !important
+
+.task:focus-within:not(.task-not-editable.task-not-scoreable)
+.task:hover:not(.task-not-editable.task-not-scoreable)
+  .task-content
+    background-color alpha(#000, 0.025)
+
+
+.column-background
+  display none !important
+
+.habit-control-negative-disabled
+.habit-control-negative-enabled
+  padding-top 0
+
+.tasks-navigation
+  display none
+
+.check.svg-icon
+  margin 0 !important
+  width $check-svg-icon-size !important
+  height $check-svg-icon-size !important
+
+.custom-control-label:before
+  width $custom-control-size !important
+  height $custom-control-size !important
+  border-color #ccc !important
+
+.checklist-item .custom-control-label:after
+.checklist-item .custom-control-label:before
+  margin-top -5px
+
+.custom-control
+  padding-left 1.15rem
+
+.task-disabled-daily-todo-control-bg
+  background-color hsl(264 6% 75% / 1) !important
+
+.task-disabled-daily-todo-control-checkbox
+  color #999 !important
+
+/* TODO: Below, do more tests */
+/*
+#app-header,
+.view-party {
+	background-color: #f9f9f9 !important;
+	background-image: none !important;
+}
+
+.small-text {
+	color: #666 !important;
+} */

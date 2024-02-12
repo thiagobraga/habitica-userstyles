@@ -1,0 +1,238 @@
+/* ==UserStyle==
+@name          Habitica UI Adjustments
+@description   🧙‍♂️ Habitica UI Adjustments
+@version       0.0.1
+@author        Thiago Braga <thi@thiagobraga.dev>
+@license       MIT
+@namespace     https://github.com/thiagobraga
+@homepageURL   https://github.com/thiagobraga/habitica-userstyles
+@supportURL    https://github.com/thiagobraga/habitica-userstyles/issues
+@updateURL     https://github.com/thiagobraga/habitica-userstyles/raw/master/theme.user.css
+==/UserStyle== */
+@-moz-document
+  domain('habitica.com')
+{
+  a:hover {
+    text-decoration: none;
+  }
+  a {
+    color: #4278b1;
+  }
+  body {
+    font-size: 11px !important;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h3.markdown,
+  h4 {
+    font-family: 'Helvetica LT Std Cond', Helvetica, Roboto Condensed, sans-serif;
+  }
+  h3.markdown {
+    font-size: 12px;
+  }
+  .markdown h1 {
+    margin: 20px 0 !important;
+    font-size: 1.5rem;
+  }
+  .markdown p {
+    margin-bottom: 0;
+  }
+  .icons {
+    opacity: 0.65;
+  }
+  .icons-right .svg-icon {
+    margin-left: 0 !important;
+  }
+  .icons span,
+  .svg-icon.streak {
+    height: 6px !important;
+  }
+  .icons span {
+    font-size: 9px;
+  }
+  ul {
+    margin-bottom: 0;
+    padding-left: 16px;
+  }
+  .custom-checkbox p {
+    margin-bottom: 3px;
+  }
+  .custom-control-label {
+    color: #686274;
+    font-size: 0.75rem;
+  }
+  .custom-control-label:before {
+    border-color: #b0acb9 !important;
+  }
+  .task-disabled-habit-control-bg > .task-disabled-habit-control-inner {
+    display: none;
+  }
+  .type_todo .icons > div:not(.icons-right) {
+    order: 1;
+  }
+  .task-clickable-area:focus,
+  .task:not(.groupTask):focus-within .left-control,
+  .task:not(.groupTask):focus-within .right-control,
+  .task:not(.groupTask):focus-within .task-content,
+  .task:not(.groupTask):hover .left-control,
+  .task:not(.groupTask):hover .right-control,
+  .task:not(.groupTask):hover .task-content {
+    border-color: transparent !important;
+  }
+  .task-title {
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .task:focus-within:not(.task-not-editable.task-not-scoreable),
+  .task:hover:not(.task-not-editable.task-not-scoreable) {
+    padding-bottom: 0 !important;
+  }
+  .task-title h1 {
+    margin: 30px 0;
+  }
+  .task-content {
+    display: grid;
+    align-items: center;
+    padding-bottom: 0 !important;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+  }
+  .task-content .task-clickable-area {
+    grid-row: 1;
+  }
+  .checklist {
+    padding: 0 0.75rem !important;
+  }
+  .task-content .checklist {
+    grid-row: 2;
+  }
+  .collapse-checklist {
+    margin-bottom: 0 !important;
+  }
+  .collapse-checklist span {
+    height: 8px !important;
+  }
+  .custom-control-label {
+    color: #666;
+    font-size: 0.625rem;
+  }
+  .task-content .icons {
+    grid-row: 1;
+  }
+  .task-clickable-area {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border: 0 !important;
+  }
+  .task {
+    margin-bottom: 1px !important;
+    box-shadow: 0 1px 2px 0 rgba(26,24,29,0.015), 0 1px 4px 0 rgba(26,24,29,0.05) !important;
+  }
+  .left-control,
+  .right-control {
+    padding-top: 0 !important;
+    min-height: 34px !important;
+  }
+  .icons {
+    margin-top: 0 !important;
+  }
+  .task-notes {
+    font-size: 10px;
+    opacity: 0.9;
+  }
+  .task-notes:not(:empty) {
+    margin-top: 4px;
+  }
+  .task-notes > h1 + hr {
+    display: none;
+  }
+  .task .left-control {
+    display: flex;
+    align-items: center;
+  }
+  .daily-todo-control {
+    margin-top: 0 !important;
+  }
+  .type_daily .task-control {
+    width: 18px;
+    height: 18px;
+  }
+  .task-control {
+    width: 20px;
+    height: 20px;
+  }
+  .task-control,
+  .left-control,
+  .right-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .habit-control-positive-disabled,
+  .habit-control-positive-enabled {
+    padding: 0;
+  }
+  .habit-control .svg-icon {
+    display: flex;
+    width: 8px;
+    height: 8px;
+  }
+  .task-disabled-daily-todo-control-content .task-title {
+    position: relative;
+    opacity: 0.5;
+  }
+  .task-disabled-daily-todo-control-content .task-title::before {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+    border-top: 1px solid rgba(0,0,0,0.85);
+    content: '';
+    transform: translateY(-50%);
+  }
+  .task.groupTask:focus-within:not(.task-not-editable.task-not-scoreable),
+  .task.groupTask:hover:not(.task-not-editable.task-not-scoreable) {
+    border: 0 !important;
+    margin: initial !important;
+    margin-bottom: 1px !important;
+  }
+  .task:focus-within:not(.task-not-editable.task-not-scoreable) .task-content,
+  .task:hover:not(.task-not-editable.task-not-scoreable) .task-content {
+    background-color: rgba(0,0,0,0.025);
+  }
+  .column-background {
+    display: none !important;
+  }
+  .habit-control-negative-disabled,
+  .habit-control-negative-enabled {
+    padding-top: 0;
+  }
+  .tasks-navigation {
+    display: none;
+  }
+  .check.svg-icon {
+    margin: 0 !important;
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .custom-control-label:before {
+    width: 16px !important;
+    height: 16px !important;
+    border-color: #ccc !important;
+  }
+  .checklist-item .custom-control-label:after,
+  .checklist-item .custom-control-label:before {
+    margin-top: -5px;
+  }
+  .custom-control {
+    padding-left: 1.15rem;
+  }
+  .task-disabled-daily-todo-control-bg {
+    background-color: #bebbc3 !important;
+  }
+  .task-disabled-daily-todo-control-checkbox {
+    color: #999 !important;
+  }
+}

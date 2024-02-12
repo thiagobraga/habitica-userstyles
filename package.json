@@ -1,0 +1,31 @@
+{
+  "name": "habitica-userstyles",
+  "description": "🧙‍♂️ Habitica UI Adjustments",
+  "author": "Thiago Braga <thi@thiagobraga.dev>",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "userstyle": {
+    "name": "Habitica UI Adjustments",
+    "namespace": "https://github.com/thiagobraga",
+    "homepageURL": "https://github.com/thiagobraga/habitica-userstyles",
+    "supportURL": "https://github.com/thiagobraga/habitica-userstyles/issues",
+    "updateBaseURL": "https://github.com/thiagobraga/habitica-userstyles/raw/master/",
+    "match": {
+      "domain": "habitica.com"
+    }
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.17",
+    "chokidar-cli": "3.0.0",
+    "font-awesome": "4.7.0",
+    "postcss": "8.4.33",
+    "postcss-cli": "11.0.0",
+    "stylus": "0.62.0",
+    "userstyle-gen": "0.1.2"
+  },
+  "resolutions": {
+    "semver": ">=5.7.2",
+    "yargs-parser": ">=13.1.2"
+  }
+}
